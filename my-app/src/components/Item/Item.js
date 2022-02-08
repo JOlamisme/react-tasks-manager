@@ -55,6 +55,7 @@ class Item extends React.Component {
     }
 
     handleSave = (e) => {
+        this.props.submittingStatus.current = true;
         e.preventDefault();
         const newName = this.state.newName
         const newDescription = this.state.newDescription;
@@ -102,8 +103,9 @@ class Item extends React.Component {
                 <ListGroup className="task-table col-12">
                     <ListGroup.Item className="task-table-row col-12">
                         <input onClick={this.props.toggleComplete} className="checkbox" type='checkbox'></input>
-                        <div style={{ textDecoration: this.props.item.isChecked ? 'line-through' : '' }}>
-                            {this.state.name}
+                        <div className="nameandassignedto" style={{ textDecoration: this.props.item.isChecked ? 'line-through' : '' }}>
+                            <h6>Name: {this.state.name}</h6>
+                            <h6>Assigned to: {this.state.assignedTo}</h6>
                         </div>
                         <Button variant="primary" style={{ display: this.props.item.isChecked ? 'none' : 'block' }} onClick={this.handleShow} className="edit" >Edit</Button>
                         <Button style={{
@@ -123,7 +125,7 @@ class Item extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="description-input">Description</label>
-                                <textarea name="description" onChange={this.descriptionChange} value={this.state.newDescription} className="col-12" type="text"></textarea>
+                                <textarea name="description" onChange={this.descriptionChange} value={this.state.newDescription} name="description" className="col-12" type="text"></textarea>
                             </div>
                             <div className="row-form row">
                                 <div className="form-group2 col-6">

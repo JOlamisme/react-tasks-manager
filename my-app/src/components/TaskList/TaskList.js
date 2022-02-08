@@ -10,7 +10,9 @@ class TaskList extends React.Component {
                 <div className="to-do-list">
                 <h2 className="table-title">To Do List</h2>
                 {this.props.items.map(item => (
-                    <Item handleRemove={() => this.props.handleRemove(item.id)} toggleComplete={() => this.props.toggleComplete(item.id)} key={item.id} item={item} />
+                    <Item handleRemove={() => this.props.handleRemove(item.id)} 
+                    toggleComplete={() => this.props.toggleComplete(item.id)} 
+                    submittingStatus={this.props.submittingStatus} key={item.id} item={item} />
                     ))}
             </div>
         )
