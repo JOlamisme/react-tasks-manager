@@ -1,33 +1,30 @@
 import TaskManager from '../TaskManager/TaskManger';
 import TaskList from '../../components/TaskList/TaskList';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import Src from '../../index';
 import './App.css';
 
 
-class App extends React.Component {
+const App = () => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isDark: false
-    };
-    this.handleRemove = this.handleRemove.bind(this);
-  }
+  const [state, setState] = useState({
+    items: [],
+    isDark: false
+  });
 
-  addItem = (item) => {
-    this.setState({
-      items: [item, ...this.state.items]
+
+  const addItem = (item) => {
+    setState({
+      items: [item, ...state.items]
     });
   }
 
-  
 
-  toggleComplete = (id) => {
-    this.setState({
-      items: this.state.items.map(item => {
+
+  const toggleComplete = (id) => {
+    setState({
+      items: state.items.map(item => {
         if (item.id === id) {
           return {
             ...item,
@@ -40,44 +37,42 @@ class App extends React.Component {
     })
   }
 
-  handleRemove = (id) => {
-    const targetlist = [...this.state.items].filter(item => item.id !== id)
-    this.setState({ items: targetlist })
+  const handleRemove = (id) => {
+    const targetlist = [...state.items].filter(item => item.id !== id)
+    setState({ items: targetlist })
   }
 
 
-  handleUpdate = (id) => {
-    const targetlist = [...this.state.items].find(item => item.id === id);
+  const handleUpdate = (id) => {
+    const targetlist = [...state.items].find(item => item.id === id);
     alert(targetlist);
   }
 
-  handleDark = () => {
-    this.setState({ isDark: true })
+  const handleDark = () => {
+    setState({ isDark: true })
   }
 
-  handleWhite = () => {
-    this.setState({ isDark: false })
+  const handleWhite = () => {
+    setState({ isDark: false })
   }
 
-  render() {
-    return (
-      <div className="background" style={{ backgroundColor: this.state.isDark ? 'rgb(21,21,21)' : 'white' }} >
-        <div className="container">
-          <div className="top-bar" style={{ display: 'flex' }}>
-            <h1 className="title" style={{ color: this.state.isDark ? 'white' : 'black' }}>Welcome Back !</h1>
-            {/* {!this.state.isDark && <a onClick={this.handleDark} href="#" className="dark-mode">
+  return (
+    <div className="background" style={{ backgroundColor: state.isDark ? 'rgb(21,21,21)' : 'white' }} >
+      <div className="container">
+        <div className="top-bar" style={{ display: 'flex' }}>
+          <h1 className="title" style={{ color: state.isDark ? 'white' : 'black' }}>Welcome Back !</h1>
+          {/* {!this.state.isDark && <a onClick={this.handleDark} href="#" className="dark-mode">
               <BsFillMoonFill />
             </a>}
             {this.state.isDark && <a onClick={this.handleWhite} href="#" className="dark-mode">
               <BsFillSunFill style={{ color: 'white' }} />
             </a>} */}
-          </div>
-          <TaskManager items={this.state.items} isDark={this.state.isDark} onSubmit={this.addItem} />
-          <TaskList isDark={this.state.isDark} handleRemove={this.handleRemove} handleUpdate={this.handleUpdate} toggleComplete={this.toggleComplete} items={this.state.items} />
         </div>
+        <TaskManager items={state.items} isDark={state.isDark} onSubmit={addItem} />
+        <TaskList isDark={state.isDark} handleRemove={handleRemove} handleUpdate={handleUpdate} toggleComplete={toggleComplete} items={state.items} />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 

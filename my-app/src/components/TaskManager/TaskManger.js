@@ -1,22 +1,22 @@
-import React, { useDebugValue, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocalStorage } from "../useLocalStorage";
 import { Button } from 'react-bootstrap'
 import './TaskManager.css';
 import shortid from 'shortid';
 import { API_GET_TASK } from '../../global/constants';
 
-async function fetchTask(setTask) {
-    const res = await fetch(API_GET_TASK)
-    const { task } = await res.json()
-    return task
-}
+// async function fetchTask(setTask) {
+//     const res = await fetch(API_GET_TASK)
+//     const { task } = await res.json()
+//     return task
+// }
 
 
 
-function TaskManager(props) {
+const TaskManager = (props) => {
 
-    const [task, setTask] = useLocalStorage ({
-        saved: localStorage.getItem("task"),
+    const [task, setTask] = useState ({
+        // saved: localStorage.getItem("task"),
         id: shortid.generate(),
         name: '',
         description: '',
@@ -27,9 +27,9 @@ function TaskManager(props) {
         descriptionError: false
     })
 
-    useEffect(() => {
-        fetchTask(setTask)
-    }, [])
+    // useEffect(() => {
+    //     fetchTask(setTask)
+    // }, [])
 
     // Create the save method
     // save(() => {

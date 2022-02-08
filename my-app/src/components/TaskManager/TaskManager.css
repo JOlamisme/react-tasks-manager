@@ -1,6 +1,6 @@
   .new-task{
     color:rgb(14, 15, 15);
-    overflow: scroll;
+    /* overflow: scroll; */
     border-radius: 50px;
     border: none;
     box-shadow: rgba(159, 159, 179, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgb(20, 20, 20) 0px -2px 6px 0px inset;
