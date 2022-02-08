@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import Src from '../../index';
 import './App.css';
+import useLocalStorage from '../useLocalStorage';
 
 
 const App = () => {
@@ -12,7 +13,6 @@ const App = () => {
     items: [],
     isDark: false
   });
-
 
   const addItem = (item) => {
     setState({
