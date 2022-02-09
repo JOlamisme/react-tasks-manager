@@ -5,6 +5,7 @@ import './TaskManager.css';
 import shortid from 'shortid';
 import { API_GET_TASK } from '../../global/constants';
 
+
 // async function fetchTask(setTask) {
 //     const res = await fetch(API_GET_TASK)
 //     const { task } = await res.json()
@@ -102,7 +103,7 @@ const TaskManager = (props) => {
         } else if(task.name && task.description && task.assignedTo) {
              props.onSubmit(task)
                setTask({
-                    id: "",
+                    id: shortid.generate(),
                     name: "",
                     description: "",
                     assignedTo: "",
