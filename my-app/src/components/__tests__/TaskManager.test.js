@@ -1,17 +1,19 @@
-import TaskManager from "../TaskManager/TaskManager";
 import handleChange from "../TaskManager";
 
 
-test("convert array of country data objects to array of countries", ()=>{
-    const inputObject = [
-        {name: "name", capital: "name"},
-        {name: "description", capital: "description"},
-        ]
-      const expectedValue = ["name","description"]
+// test("convert array of country data objects to array of countries", ()=>{
+//     const inputObject = [
+//         {name: "name", capital: "name"},
+//         {name: "description", capital: "description"},
+//         ]
       
-      //act
-      const actualValue = handleChange(inputObject)
+//       //act
+//       const actualValue = handleChange(inputObject)
       
-      //assertions
-      expect(actualValue).toEqual(expectedValue)
-})
+//       //assertions
+//       expect(actualValue).toBeDefined();
+// })
+
+test('there is a new flavor idea', () => {
+    expect(handleSubmit()).toBeDefined();
+  });
