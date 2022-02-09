@@ -1,4 +1,4 @@
-import TaskManager from '../TaskManager/TaskManger';
+import TaskManager from '../TaskManager/TaskManager';
 import TaskList from '../../components/TaskList/TaskList';
 import React, { useState, useEffect, useRef } from 'react';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';

@@ -1,5 +1,5 @@
 // import { useState, useEffect } from "react";
-// import TaskManager from "./TaskManager/TaskManger";
+// import TaskManager from "./TaskManager/TaskManager";
 
 // // function getStorageValue(task, setTask) {
 // //   // getting stored value
