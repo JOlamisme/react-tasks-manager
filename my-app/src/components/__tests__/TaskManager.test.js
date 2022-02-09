@@ -14,6 +14,6 @@ import handleChange from "../TaskManager";
 //       expect(actualValue).toBeDefined();
 // })
 
-test('there is a new flavor idea', () => {
-    expect(handleSubmit()).toBeDefined();
-  });
+// test('there is a new flavor idea', () => {
+//     expect(handleSubmit()).toBeDefined();
+//   });
