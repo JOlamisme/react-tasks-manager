@@ -12,7 +12,9 @@ import { API_GET_TASK } from '../../global/constants';
 //     return task
 // }
 
-
+test("convert array of country data objects to array of countries", () => {
+  
+})
 
 const TaskManager = (props) => {
 
