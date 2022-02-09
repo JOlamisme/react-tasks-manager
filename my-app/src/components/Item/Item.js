@@ -104,8 +104,8 @@ class Item extends React.Component {
                     <ListGroup.Item className="task-table-row col-12">
                         <input onClick={this.props.toggleComplete} className="checkbox" type='checkbox'></input>
                         <div className="nameandassignedto" style={{ textDecoration: this.props.item.isChecked ? 'line-through' : '' }}>
-                            Name: {this.state.name}
-                            {/* <h6>Assigned to: {this.state.assignedTo}</h6> */}
+                            <h6>Name: {this.state.name}</h6>
+                            <h6>Assigned to: {this.state.assignedTo}</h6>
                         </div>
                         <Button variant="primary" style={{ display: this.props.item.isChecked ? 'none' : 'block' }} onClick={this.handleShow} className="edit" >Edit</Button>
                         <Button style={{
