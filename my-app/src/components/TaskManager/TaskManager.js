@@ -116,7 +116,7 @@ const TaskManager = (props) => {
             <h2 className="new-task-title">New Task</h2>
             <form onSubmit={handleSubmit} id="new-task-form">
                 <div className="form-group">
-                    <label htmlFor="name-input">Name</label>
+                    <label htmlFor="name-input">Task name</label>
                     <div className="errorMessage">{task.nameError ? '(Please enter a task name)' : ''}</div>
                     <input style={{ border: task.nameError ? '2px red solid' : '' }} name="name" value={task.name} onChange={handleChange} className="col-12" id="name-input" required />
                 </div>
@@ -136,7 +136,7 @@ const TaskManager = (props) => {
                     </div>
                 </div>
                 <div className="add-task-btn">
-                    <Button onClick={handleSubmit} className="btn-warning col-12">Add Task</Button>
+                    <Button onClick={handleSubmit} className="btn-warning col-12">Add</Button>
                 </div>
             </form>
         </div>
