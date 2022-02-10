@@ -105,7 +105,7 @@ class Item extends React.Component {
                         <input onClick={this.props.toggleComplete} className="checkbox" type='checkbox'></input>
                         <div className="nameandassignedto" style={{ textDecoration: this.props.item.isChecked ? 'line-through' : '' }}>
                             <h6>Name: {this.state.name}</h6>
-                            <h6>Assigned to: {this.state.assignedTo}</h6>
+                            <h6>Venue: {this.state.assignedTo}</h6>
                         </div>
                         <Button variant="primary" style={{ display: this.props.item.isChecked ? 'none' : 'block' }} onClick={this.handleShow} className="edit" >Edit</Button>
                         <Button style={{

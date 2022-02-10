@@ -89,7 +89,6 @@
 
   .btn {
     font-size: 3rem;
-    letter-spacing: .8rem;
     border: none;
     font-size: 1.5rem;
     color: black;
@@ -98,8 +97,8 @@
   .col-12 {
     background: linear-gradient(90deg, rgba(224,229,244,1) 28%, rgba(234,238,242,1) 61%, rgba(237,240,241,1) 98%, rgba(228,237,238,1) 100%, rgba(226,234,244,1) 100%, rgba(216,227,240,1) 100%, rgba(236,236,241,1) 100%);
     font-size: 22px;
-    margin: 10px auto;
-    height: 2.3rem;
+    /* margin: 10px auto; */
+    /* height: 2.3rem; */
     border: none;
     box-shadow: rgba(159, 159, 179, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgb(20, 20, 20) 0px -2px 6px 0px inset;
 }

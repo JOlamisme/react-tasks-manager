@@ -86,16 +86,16 @@ const App = () => {
   }
 
   return (
-    <div className="background" style={{ backgroundColor: isDark ? 'rgb(21,21,21)' : 'white' }} >
+    <div className="background" style={{ backgroundImage: isDark ? `url("https://images.wallpaperscraft.com/image/single/starry_sky_tree_night_sky_119989_1920x1080.jpg")` : `url('https://wallpaperxyz.com/wp-content/uploads/Simple-Wallpaper-Full-HD-Free-Download-Desktop-PC-Laptop-Wallpaperxyz.com-3.png')` }} >
       <div className="container">
         <div className="top-bar" style={{ display: 'flex' }}>
-          <h1 className="title" style={{ color: isDark ? 'white' : 'black' }}>Welcome Back        <RiChatSmile2Fill/></h1>
-          {/* {!this.state.isDark && <a onClick={this.handleDark} href="#" className="dark-mode">
-              <BsFillMoonFill />
+          <h1 className="title" style={{ color: isDark ? 'white' : 'black' }}>Welcome Back<RiChatSmile2Fill/></h1>
+          {!isDark && <a onClick={handleDark} href="#" className="dark-mode">
+              <BsFillMoonFill style={{color: 'black'}}/>
             </a>}
-            {this.state.isDark && <a onClick={this.handleWhite} href="#" className="dark-mode">
+            {isDark && <a onClick={handleWhite} href="#" className="dark-mode">
               <BsFillSunFill style={{ color: 'white' }} />
-            </a>} */}
+            </a>}
         </div>
         <TaskManager
           items={items}

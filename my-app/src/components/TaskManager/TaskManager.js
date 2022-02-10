@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 import './TaskManager.css';
 import shortid from 'shortid';
 import { API_GET_TASK } from '../../global/constants';
-import { GrUserManager } from "react-icons/gr";
+import { FcManager } from "react-icons/fc";
 import { CgPlayListAdd } from "react-icons/cg";
 import { CgRename } from "react-icons/cg";
 import { BsFillPenFill } from "react-icons/bs";
@@ -118,25 +118,27 @@ const TaskManager = (props) => {
     }
     return (
         <div className="new-task col">
-            <h2 className="new-task-title"> <GrUserManager /></h2>
+            <h2 className="new-task-title" style={{ color: props.isDark ? 'white' : 'black'}}>
+                <FcManager style={{ color: props.isDark ? 'white' : 'black'}} />
+                </h2>
             <form onSubmit={handleSubmit} id="new-task-form">
                 <div className="form-group">
-                    <label htmlFor="name-input">Task name <CgRename/> </label>
+                    <label htmlFor="name-input" style={{ color: props.isDark ? 'white' : 'black'}} >Task name <CgRename/> </label>
                     <div className="errorMessage">{task.nameError ? '(Please enter a task name)' : ''}</div>
                     <input style={{ border: task.nameError ? '2px red solid' : '' }} name="name" value={task.name} onChange={handleChange} className="col-12" id="name-input" required />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="description-input1">Description <BsFillPenFill/> </label>
+                    <label htmlFor="description-input1" style={{ color: props.isDark ? 'white' : 'black'}}>Description <BsFillPenFill/> </label>
                     <div className="errorMessage">{task.descriptionError ? '(Please enter a description)' : ''}</div>
                     <textarea style={{ border: task.descriptionError ? '2px red solid' : '' }} name="description" value={task.description} onChange={handleChange} className="col-12" type="text"></textarea>
                 </div>
                 <div className="row-form row">
                     <div className="form-group2 col-6">
-                        <label htmlFor="assignedTo-input">Venue <MdLocationPin/> </label>
+                        <label htmlFor="assignedTo-input" style={{ color: props.isDark ? 'white' : 'black'}} >Venue <MdLocationPin/> </label>
                         <input name="assignedTo" value={task.assignedTo} onChange={handleChange} className="col-12" id="assignedTo-input" />
                     </div>
                     <div className="form-group2 col-6">
-                        <label htmlFor="date-input">Date <BsCalendar2Date/> </label>
+                        <label htmlFor="date-input" style={{ color: props.isDark ? 'white' : 'black'}} >Date <BsCalendar2Date/> </label>
                         <input name="date" onChange={handleChange} className="col-12" type="date" id="date-input" />
                     </div>
                 </div>

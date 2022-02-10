@@ -1,9 +1,7 @@
 import React from 'react';
-import handleChange from "../TaskManager/TaskManager";
 import { render, screen } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import TaskManager from '../TaskManager';
 
 
 // describe("TaskManager rendering specification", () => {
@@ -19,12 +17,26 @@ import TaskManager from '../TaskManager';
 
 
 test("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<TaskManager />, div);
 
-
-    expect(div.querySelector("h2").textContent).toBe("New Task")
 })
+
+test(`correctly changing the state's value`, () => {
+
+})
+
+test("able to add task", () => {
+
+})
+
+test("after add task set the all the state value to a empty string", () => {
+
+})
+
+test("convert array of task data objects to array of tasks", () => {
+
+})
+
+
 
 // test("convert array of country data objects to array of countries", () => {
 //     const inputObject = {
