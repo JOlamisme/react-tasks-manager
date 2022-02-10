@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 import './TaskManager.css';
 import shortid from 'shortid';
 import { API_GET_TASK } from '../../global/constants';
-import { FcManager } from "react-icons/fc";
+import { TiArrowRepeatOutline } from "react-icons/ti";
 import { CgPlayListAdd } from "react-icons/cg";
 import { CgRename } from "react-icons/cg";
 import { BsFillPenFill } from "react-icons/bs";
@@ -119,7 +119,7 @@ const TaskManager = (props) => {
     return (
         <div className="new-task col">
             <h2 className="new-task-title" style={{ color: props.isDark ? 'white' : 'black'}}>
-                <FcManager style={{ color: props.isDark ? 'white' : 'black'}} />
+                <TiArrowRepeatOutline style={{ color: props.isDark ? 'white' : 'black'}} />
                 </h2>
             <form onSubmit={handleSubmit} id="new-task-form">
                 <div className="form-group">
