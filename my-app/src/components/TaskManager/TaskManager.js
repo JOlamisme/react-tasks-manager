@@ -122,7 +122,7 @@ const TaskManager = (props) => {
                     <input style={{ border: task.nameError ? '2px red solid' : '' }} name="name" value={task.name} onChange={handleChange} className="col-12" id="name-input" required />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="description-input1">Description</label>
+                    <label htmlFor="description-input1"><h5>Description</h5></label>
                     <div className="errorMessage">{task.descriptionError ? '(Please enter a description)' : ''}</div>
                     <textarea style={{ border: task.descriptionError ? '2px red solid' : '' }} name="description" value={task.description} onChange={handleChange} className="col-12" type="text"></textarea>
                 </div>

@@ -67,3 +67,8 @@ h1{
     letter-spacing: 10px;
 }
 
+.form-group {
+    background-color: #FFF;
+    background: transparent;
+}
+
