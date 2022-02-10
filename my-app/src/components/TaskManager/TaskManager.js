@@ -141,7 +141,7 @@ const TaskManager = (props) => {
                     </div>
                 </div>
                 <div className="add-task-btn">
-                    <Button onClick={handleSubmit} className="btn-warning col-12">Add     <CgPlayListAdd/></Button>
+                    <Button onClick={handleSubmit} className="btn-warning col-12">Add</Button>
                 </div>
             </form>
         </div>
