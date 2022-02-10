@@ -6,7 +6,7 @@ import Src from '../../index';
 import './App.css';
 // import useLocalStorage from '../useLocalStorage';
 import { API_GET_DATA } from '../../global/constants';
-
+import { RiChatSmile2Fill } from "react-icons/ri";
 
 async function fetchData(setItems) {
   const res = await fetch(API_GET_DATA)
@@ -89,7 +89,7 @@ const App = () => {
     <div className="background" style={{ backgroundColor: isDark ? 'rgb(21,21,21)' : 'white' }} >
       <div className="container">
         <div className="top-bar" style={{ display: 'flex' }}>
-          <h1 className="title" style={{ color: isDark ? 'white' : 'black' }}>Welcome Back !</h1>
+          <h1 className="title" style={{ color: isDark ? 'white' : 'black' }}>Welcome Back        <RiChatSmile2Fill/></h1>
           {/* {!this.state.isDark && <a onClick={this.handleDark} href="#" className="dark-mode">
               <BsFillMoonFill />
             </a>}

@@ -2,7 +2,7 @@ import React from 'react';
 // import { ListGroup } from 'react-bootstrap';
 import { Button, Modal, ListGroup } from 'react-bootstrap';
 import './Item.css';
-
+import { FcRemoveImage } from "react-icons/fc";
 
 class Item extends React.Component {
     constructor(props) {

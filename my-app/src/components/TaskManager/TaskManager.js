@@ -4,7 +4,8 @@ import { Button } from 'react-bootstrap'
 import './TaskManager.css';
 import shortid from 'shortid';
 import { API_GET_TASK } from '../../global/constants';
-
+import { GrUserManager } from "react-icons/gr";
+import { CgPlayListAdd } from "react-icons/cg";
 
 // async function fetchTask(setTask) {
 //     const res = await fetch(API_GET_TASK)
@@ -113,7 +114,7 @@ const TaskManager = (props) => {
     }
     return (
         <div className="new-task col">
-            <h2 className="new-task-title">New Task</h2>
+            <h2 className="new-task-title"> <GrUserManager /></h2>
             <form onSubmit={handleSubmit} id="new-task-form">
                 <div className="form-group">
                     <label htmlFor="name-input">Task name</label>
@@ -136,7 +137,7 @@ const TaskManager = (props) => {
                     </div>
                 </div>
                 <div className="add-task-btn">
-                    <Button onClick={handleSubmit} className="btn-warning col-12">Add</Button>
+                    <Button onClick={handleSubmit} className="btn-warning col-12">Add     <CgPlayListAdd/></Button>
                 </div>
             </form>
         </div>

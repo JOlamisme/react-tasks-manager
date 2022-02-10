@@ -1,14 +1,14 @@
 import React from 'react';
 import Item from '../../components/Item/Item';
 import './TaskList.css';
-
+import { FcTodoList } from "react-icons/fc";
 
 
 class TaskList extends React.Component {
         render() {
             return (
                 <div className="to-do-list">
-                <h2 className="table-title">To Do List</h2>
+                <h2 className="table-title">List  <FcTodoList /></h2>
                 {this.props.items.map(item => (
                     <Item handleRemove={() => this.props.handleRemove(item.id)} 
                     toggleComplete={() => this.props.toggleComplete(item.id)} 
