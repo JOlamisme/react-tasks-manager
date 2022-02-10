@@ -89,7 +89,7 @@ const App = () => {
     <div className="background" style={{ backgroundImage: isDark ? `url("https://images.wallpaperscraft.com/image/single/starry_sky_tree_night_sky_119989_1920x1080.jpg")` : `url('https://wallpaperxyz.com/wp-content/uploads/Simple-Wallpaper-Full-HD-Free-Download-Desktop-PC-Laptop-Wallpaperxyz.com-3.png')` }} >
       <div className="container">
         <div className="top-bar" style={{ display: 'flex' }}>
-          <h1 className="title" style={{ color: isDark ? 'white' : 'black' }}>Welcome Back<RiChatSmile2Fill/></h1>
+          <h1 className="title" style={{ color: isDark ? 'white' : 'black' }}>Welcome Back  <RiChatSmile2Fill/></h1>
           {!isDark && <a onClick={handleDark} href="#" className="dark-mode">
               <BsFillMoonFill style={{color: 'black'}}/>
             </a>}
